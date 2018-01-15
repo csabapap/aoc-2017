@@ -7,7 +7,7 @@ class Day03Test {
 
   @Test
   fun part1sample() {
-    assertEquals(1, Day03.part1(1))
+    assertEquals(0, Day03.part1(1))
     assertEquals(3, Day03.part1(12))
     assertEquals(2, Day03.part1(23))
     assertEquals(31, Day03.part1(1024))
@@ -15,7 +15,7 @@ class Day03Test {
 
   @Test
   fun part1() {
-    answerEquals(Answer.DAY03_PART1, Day03.part1(368078))
+    answerEquals(Answer.DAY03_PART1, Day03.part1(312051))
   }
 
   @Test
