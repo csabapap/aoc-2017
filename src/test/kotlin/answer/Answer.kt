@@ -10,7 +10,7 @@ object Answer {
   val DAY02_PART2 = decrypt("MTk3").toInt()
   val DAY03_PART1 = decrypt("NDMw").toInt()
   val DAY03_PART2 = decrypt("MzY5NjAx").toInt()
-  val DAY04_PART1 = decrypt("NDc3").toInt()
+  val DAY04_PART1 = decrypt("MzM3").toInt()
   val DAY04_PART2 = decrypt("MTY3").toInt()
   val DAY05_PART1 = decrypt("MzU5MzQ4").toInt()
   val DAY05_PART2 = decrypt("Mjc2ODg3NjA=").toInt()

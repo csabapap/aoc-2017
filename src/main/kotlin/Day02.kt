@@ -21,7 +21,34 @@ object Day02 {
     }
 
     fun part2(input: String): Int {
-        TODO()
+        var sum = 0
+        input.lines().forEach({ line ->
+            var lineSum = 0;
+            val numbersString = line.split("\\s".toRegex())
+            for (i in 0 until numbersString.size - 1) {
+                (i + 1 until numbersString.size)
+                        .filter {
+                            val first = numbersString[i].toInt()
+                            val second = numbersString[it].toInt()
+                            if (first > second) {
+                                first % second == 0
+                            } else {
+                                second % first == 0
+                            }
+                        }
+                        .forEach {
+                            val first = numbersString[i].toInt()
+                            val second = numbersString[it].toInt()
+                            if (first > second) {
+                                lineSum += first / second
+                            } else {
+                                lineSum += second / first
+                            }
+                        }
+            }
+            sum += lineSum
+        })
+        return sum
     }
 
 }
