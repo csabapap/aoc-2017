@@ -18,7 +18,23 @@ object Day04 {
     }
 
     fun part2(input: String): Int {
-        TODO()
+        val lines = input.split("\n")
+        var nmbOfValidPassPhrases = 0
+        lines.forEach lines@{ line ->
+            val wordSet = mutableSetOf<String>()
+            val words = line.split(" ")
+            words.forEach {word ->
+                val wordArray = word.toCharArray()
+                wordArray.sort()
+                val sortedWord = String(wordArray)
+                if (wordSet.contains(sortedWord)) {
+                    return@lines
+                }
+                wordSet.add(sortedWord)
+            }
+            nmbOfValidPassPhrases+=1
+        }
+        return nmbOfValidPassPhrases
     }
 
 }
